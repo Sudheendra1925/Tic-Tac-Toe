@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE</title>
+<link rel="stylesheet" href="./tictac.css">
+</head>
+<body>
+    <marquee>TIC TAC TOE</marquee>
+    <div id="box">
+    <div id="main" >
+
+ <form ><input type="button" id="a"   class="set" onclick=" as('a') " >a</form>
+ <form ><input type="button" id="b"  class="set" onclick="as('b')">b</form>
+ <form ><input type="button" id="c" class="set" onclick="as('c')">c</form>
+ <form ><input type="button" id="d" class="set" onclick="as('d')">d</form>
+ <form ><input type="button" id="e" class="set" onclick="as('e')">e</form>
+ <form ><input type="button" id="f" class="set" onclick="as('f')">f</form>
+ <form ><input type="button" id="g" class="set" onclick="as('g')">g</form>
+<form ><input type="button" id="h" class="set" onclick="as('h')">h</form>
+<form ><input type="button" id="i" class="set" onclick="as('i')">i</form>
+
+</div>
+<button id="x" class="opt" onclick="reset()">RESET</button>
+</div>
+<script>
+     let x=document.querySelectorAll('input[type="button"]')
+    c=2
+
+    function as(n){
+     if(c%2==0){
+   document.getElementById(n).value="X"
+
+    if(x[0].value=="X" && x[1].value=="X" && x[2].value=="X" ||x[3].value=="X" && x[4].value=="X" && x[5].value=="X" ||x[6].value=="X" && x[7].value=="X" && x[8].value=="X" ||x[0].value=="X" && x[3].value=="X" && x[6].value=="X" ||x[1].value=="X" && x[4].value=="X" && x[7].value=="X" ||x[2].value=="X" && x[5].value=="X" && x[8].value=="X" ||x[0].value=="X" && x[4].value=="X" && x[8].value=="X" ||x[2].value=="X" && x[4].value=="X" && x[6].value=="X" ||x[0].value=="O" && x[1].value=="O" && x[2].value=="O" ||x[3].value=="O" && x[4].value=="O" && x[5].value=="O" ||x[6].value=="O" && x[7].value=="O" && x[8].value=="O" ||x[0].value=="O" && x[3].value=="O" && x[6].value=="O" ||x[1].value=="O" && x[4].value=="O" && x[7].value=="O" ||x[2].value=="O" && x[5].value=="O" && x[8].value=="O" ||x[0].value=="O" && x[4].value=="O" && x[8].value=="O" ||x[2].value=="O" && x[4].value=="O" && x[6].value=="O" ){
+
+        document.body.style.backgroundColor="green";
+      
+    }
+     }
+     if(c%2==1){
+        document.getElementById(n).value="O";
+        if(x[0].value=="X" && x[1].value=="X" && x[2].value=="X" ||x[3].value=="X" && x[4].value=="X" && x[5].value=="X" ||x[6].value=="X" && x[7].value=="X" && x[8].value=="X" ||x[0].value=="X" && x[3].value=="X" && x[6].value=="X" ||x[1].value=="X" && x[4].value=="X" && x[7].value=="X" ||x[2].value=="X" && x[5].value=="X" && x[8].value=="X" ||x[0].value=="X" && x[4].value=="X" && x[8].value=="X" ||x[2].value=="X" && x[4].value=="X" && x[6].value=="X" ||x[0].value=="O" && x[1].value=="O" && x[2].value=="O" ||x[3].value=="O" && x[4].value=="O" && x[5].value=="O" ||x[6].value=="O" && x[7].value=="O" && x[8].value=="O" ||x[0].value=="O" && x[3].value=="O" && x[6].value=="O" ||x[1].value=="O" && x[4].value=="O" && x[7].value=="O" ||x[2].value=="O" && x[5].value=="O" && x[8].value=="O" ||x[0].value=="O" && x[4].value=="O" && x[8].value=="O" ||x[2].value=="O" && x[4].value=="O" && x[6].value=="O" ){
+
+ document.body.style.backgroundColor="red";
+
+    }
+}
+c=c+1;
+} 
+function reset(){
+   
+    for(i=0;i<9;i++)
+    {
+      x[i].value=""
+
+    }
+    document.body.style.backgroundColor="cornsilk";
+    c=2;  
+}
+</script>
+</body>
+</html>
